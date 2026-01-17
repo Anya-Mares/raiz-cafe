@@ -1,0 +1,43 @@
+.footer {
+scroll-margin-top: 80px;
+  background-color: #18181b;
+  color: #e4e4e7;
+  padding: 48px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  text-align: center;
+}
+
+.brand {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.copy {
+  font-size: 0.85rem;
+  color: #a1a1aa;
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+}
+
+.socials a {
+  color: #a1a1aa;
+  transition: color 0.2s ease;
+}
+
+.socials a:hover {
+  color: #e4e4e7;
+}
+

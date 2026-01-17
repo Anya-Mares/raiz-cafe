@@ -1,0 +1,38 @@
+.origen {
+    scroll-margin-top: 80px;
+  padding: 96px 0;
+  background-color: #f5f3f0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.text h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #3f2e20;
+}
+
+.text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #52525b;
+}
+
+.image img {
+  border-radius: 12px;
+}
+
+/* Responsive simple */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
