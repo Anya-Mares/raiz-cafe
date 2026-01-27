@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import styles from "./Products.module.css";
+import {motion} from "framer-motion";
 
 const products = [
   {
@@ -22,14 +24,53 @@ const products = [
   },
 ];
 
+// Variants
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0 },
+};
+
 export default function Products() {
   return (
     <section id="productos" className={styles.section}>
-      <h2 className={styles.title}>Nuestros cafés</h2>
+      {/*titulo*/}
+      <motion.h2
+        className={styles.title}
+        initial={{ opacity: 0, y: 20}}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut"}}
+        viewport={{ once: true}}
+      >
+        Nuestros cafés
+        </motion.h2>
 
-      <div className={styles.grid}>
+{/*grid de productos*/}
+      <motion.div
+      className={styles.grid}
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true ,amount: 0.3}}
+      >
+
         {products.map((product) => (
-          <article key={product.id} className={styles.card}>
+          <motion.article
+            key={product.id}
+            className={styles.card}
+            variants={cardVariants}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            whileHover={{ y: -8 }}
+          >
+       
             <Image
               src={product.image}
               alt={product.name}
@@ -46,9 +87,9 @@ export default function Products() {
                 Conoce más
               </button>
             </div>
-          </article>
+          </motion.article>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
