@@ -34,7 +34,7 @@ export default function Origen() {
           viewport={{ once: true, amount: 0.3 }}
         >
         <Image
-            src="/origen.jpg"
+            src="/origen-2.jpg"
             alt="Origen del café"
             width={500}
             height={350}
