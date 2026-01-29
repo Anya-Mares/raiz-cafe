@@ -1,11 +1,9 @@
-
-
 .header {
   position: sticky;
   top: 0;
   width: 100%;
   height: 80px;
-  background: #f5f3f0;
+  background: #000000;
   border-bottom: 1px solid #e7e5e4;
   z-index: 50;
   transition: background 0.3s ease,
@@ -16,7 +14,7 @@
 .scrolled{
 -webkit-backdrop-filter: blur(10px);
  backdrop-filter: blur(10px);
-  background: rgba(20, 20, 20, 0.7);
+  background: rgba(20, 20, 20, 0.9);
    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
